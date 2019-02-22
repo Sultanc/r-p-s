@@ -10,8 +10,8 @@ let computerScore = 0;
 let playerScore = 0;
 
 console.log(playerName + ' Score : ' + playerScore + ' || Computer Score : ' + computerScore)
-console.log('---Round ' + roundCount + '---') 
-
+console.log('---Round ' + roundCount + '---')
+ 
 game()
 
 function game(){
@@ -20,18 +20,18 @@ function game(){
   function computerPlay() {
     let computerGuess = ['r','p','s'];
     return computerGuess[Math.floor(Math.random() * computerGuess.length)];
-}
+    }
 //console.log('computer choice: ' + computerSelection)
 
  //player selection
     const playerSelecion = prompt('Hi ' + playerName + ", Enter 'r' for Rocks, 'p' for Paper, 's' for Scissors");
-    console.log(computerSelection,playerSelecion)
+    console.log('Computer Choice ' + '|'+ computerSelection +':'+':'+ playerSelecion +'| ' + playerName + ' Choice')
     playRound(computerSelection,playerSelecion);
 }
 
 // Matchup
 function playRound(computerSelection,playerSelecion) {
-    
+        
      if ((playerSelecion != 'r' && playerSelecion != 'p' && playerSelecion != 's') || playerSelecion === null) {
          console.log("Please enter 'r', 'p' or 's' ")
          console.log(playerName + ' Score : ' + playerScore + ' || Computer Score : ' + computerScore)
@@ -97,10 +97,11 @@ function roundChanger() {
         console.log('GAME OVER The Computer is the WINNER ! refresh the page to play again')
     }
     else console.log('GAME OVER ' + playerName + ' is the WINNER ! refresh the page to play again')
-}
+}    
 
 // web console version, it took me 2 months to build this...
 </script>
+
 
 
 
